@@ -1,2 +1,2 @@
 # DuckWeb
-DuckJil Webpage 
+이벤트 페이지, 팬페이지, 리액티브 페이지 탬플릿 아이디어들
