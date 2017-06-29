@@ -1,0 +1,53 @@
+<html>
+<head>
+<link href="./custom.css">
+</head>
+<body>
+
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518.89 565.85">
+	
+	<defs>
+		<style>
+			.body,.head{fill:#fff8f8;}
+			.eye_light{fill:#fff;}
+			.body,.head,.eye_line,.eye{stroke:#231815; stroke-linejoin: round;}
+			.body,.head{stroke-width:4px;}
+			.eye_line,eye_color{fill:none;}
+			.eye{fill:#231815;}
+			.eye_line,.eye_color{stroke-linecap:round;stroke-width:9px;}
+			.eye{stroke-width:7px;}
+			.eye_color{stroke:#ee817e;}
+		</style>
+	</defs>
+
+
+	<title>character</title>
+	
+	 <!--요거의 이름은 일러스트레이터에서 추출하는 레이어 이름-->  
+	 <!--레이어별로 g라는 이름으로 묶인다.(아마 group인듯)-->
+	 <!--현제 레이어_1 = 몸통 / 레이어_2 = 눈 임-->
+	 <!--알아보고싶은 것/ 색깔을 동적으로 바꾸기, 모양을 동적으로 바꾸기-->
+	<g id="body" data-name="body">
+		<path class="body" d="M327.11,444.49s72.47,39.15,84.64,62.42-9,47.61-24.33,42.85-57.13-36-63-45c0,0,6.35,58.72,4.76,60.83,0,0,19,113.21,17.46,115.85,0,0,3.7,32.27-22.22,42.32,0,0-32.27,16.4-45.49-28.57,0,0-14.87-71.3-16.45-78.7a89.41,89.41,0,0,1-16.34,2,85.88,85.88,0,0,1-16.33-2.08c-1.59,7.41-16.47,78.78-16.47,78.78-13.22,45-45.49,28.57-45.49,28.57-25.92-10.05-22.22-42.32-22.22-42.32-1.59-2.64,17.46-115.85,17.46-115.85-1.59-2.12,4.76-60.83,4.76-60.83-5.82,9-47.61,40.2-63,45s-36.5-19.57-24.33-42.85,84.64-62.42,84.64-62.42" transform="translate(-62.63 -162.86)"/>
+		<path class="head" d="M97.93,314.35s-40.61,7.41-32.14,43.38c9.33,39.65,45.49,33.9,45.49,33.9" transform="translate(-62.63 -162.86)"/>
+		<path class="head" d="M387.7,314.35s40.61,7.41,32.14,43.38c-9.33,39.65-45.49,33.9-45.49,33.9" transform="translate(-62.63 -162.86)"/>
+		<path class="head" d="M387.41,317.9c0,84.52-51.57,153-144.74,153-102,0-144.74-68.52-144.74-153s37.15-153,144.74-153C343.77,164.86,387.41,233.38,387.41,317.9Z" transform="translate(-62.63 -162.86)"/>
+	</g>
+		
+
+	<!-- 눈 1 -->
+	<g id="eye_1" data-name="eye_1"> <!--요거의 이름은 일러스트레이터에서 추출하는 레이어 이름-->
+		<path class="eye_line" d="M128.2,347,143,355.24s5.06-28.12,36.55-28.12,34.87,28.12,34.87,28.12" transform="translate(-62.63 -162.86)"/><ellipse class="eye" cx="117.09" cy="204.62" rx="19.84" ry="26.3"/><circle class="eye_light" cx="124.34" cy="192.38" r="8.24"/>
+		<path class="eye_color" d="M188.46,378.87c-1.24,2.53-3.49,5.07-8.81,5.07-4.9,0-7.72-2.54-8.67-5.08" transform="translate(-62.63 -162.86)"/>
+		<path class="eye_line" d="M357.15,347.62l-14.81,8.24s-5.06-28.12-36.55-28.12-34.87,28.12-34.87,28.12" transform="translate(-62.63 -162.86)"/>
+		<ellipse class="eye" cx="243" cy="205.24" rx="19.84" ry="26.3"/>
+		<circle class="eye_light" cx="251.06" cy="193" r="8.24"/>
+		<path class="eye_color" d="M296.89,379.49c1.24,2.53,3.49,5.07,8.81,5.07,4.9,0,7.72-2.54,8.67-5.08" transform="translate(-62.63 -162.86)"/>
+	</g>
+</svg>
+</div>
+
+<script data-main="app" src="lib/require.js"></script>
+</body>
+</html>
