@@ -1,4 +1,4 @@
-define(['jquery', 'velocity'], function($, velocity) {
+define(['jquery', 'bluebird'], function($, bluebird) {
     var value = 1;
     var up = function() {
       value++;

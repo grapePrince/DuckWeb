@@ -1,0 +1,9 @@
+.body,.head{fill:#fff8f8;}
+.eye_light{fill:#fff;}
+.body,.head,.eye_line,.eye{stroke:#231815; stroke-linejoin: round;}
+.body,.head{stroke-width:4px;}
+.eye_line,eye_color{fill:none;}
+.eye{fill:#231815;}
+.eye_line,.eye_color{stroke-linecap:round;stroke-width:9px;}
+.eye{stroke-width:7px;}
+.eye_color{stroke:#ee817e;}

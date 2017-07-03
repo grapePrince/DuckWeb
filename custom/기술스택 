@@ -1,0 +1,15 @@
+ jquery
+ requirejs
+ handlebars
+bluebird
+underscore
+crossroads
+(나중에 es6, es7, handlebars)
+
+npm
+webpack
+
+eslint
+mocha
+karma
+nightwatch

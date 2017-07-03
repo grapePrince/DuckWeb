@@ -3,12 +3,15 @@ requirejs.config({
     baseUrl: 'lib',
     paths: { //alias paths
     	"jquery": "./jquery",
-    	"velocity": "./velocity",
+    	"bluebird": "./bluebird",
+        "handlebars": "./handlebars",
+        "underscore": "./underscore",
+        "crossroads": "./crossroads",
         "app": '../app' 
     }
 });
 
-require(['jquery', 'velocity', 'app/main'], 
+require(['jquery', 'app/main'], 
 	function($) { // Configuration loaded now, safe to do other require calls
        ;
 	}
