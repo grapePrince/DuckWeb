@@ -1,0 +1,12 @@
+{
+  "name": "custom",
+  "version": "0.0.0",
+  "description": "custom",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
