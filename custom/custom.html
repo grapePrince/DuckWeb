@@ -1,13 +1,24 @@
 <html>
 <head>
-<link href="./custom.css">
+<link rel="stylesheet" type="text/css" href="./app.css">
 </head>
 <body>
-<!--
-<object type="image/svg+xml" data="static/body.svg" style="z-index:1; position:absolute;">현재 브라우저는 iframe을 지원하지 않습니다.</object>
-<object type="image/svg+xml" data="static/eye.svg" style="z-index:10; position:absolute; left:100; top:100;">현재 브라우저는 iframe을 지원하지 않습니다.</object>
--->
 
-<script data-main="app" src="lib/require.js"></script>
+<div class="wrap">
+	<div clss="left">
+		<div class="shape">
+			<object class="body" type="image/svg+xml" data="static/body.svg">현재 브라우저는 iframe을 지원하지 않습니다.</object>
+			<object class="eye" type="image/svg+xml" data="static/eye.svg">현재 브라우저는 iframe을 지원하지 않습니다.</object>
+		</div>
+		<div class="summary">
+			<p><span>눈 : 15번, #FF0000 </span></p>
+			<p><span>입 : 16번, #FF0001</span></p>
+		</div>
+	</div>
+	<div class="right">
+        <button>눈</button>
+	</div>
+</div>
+
 </body>
 </html>
