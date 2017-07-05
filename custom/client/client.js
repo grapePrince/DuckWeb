@@ -1,6 +1,6 @@
 
 requirejs.config({
-    baseUrl: 'lib',
+    baseUrl: '/static/lib',
     paths: { //alias paths
     	"jquery": "./jquery",
     	"bluebird": "./bluebird",

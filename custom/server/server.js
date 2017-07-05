@@ -1,21 +1,21 @@
 var express = require("express");
-var handlebars = require("express3-handlebars");
+var handlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 var path = require("path");
-var express = require("url");
-var express = require("fs");
+var url = require("url");
+var fs = require("fs");
 
-import util from './modules/common/Util';
-import DAO from './modules/common/DAO';
-let dao = new DAO();
+// var Util = require("./Util.js");
 
 // server configuration
-let app = express();
+var app = express();
 app.engine('handlebars', handlebars({ defaultLayout:'layout' }));
 
 __dirname = fs.realpathSync('.');
-console.log(path.join(__dirname, 'build'));
-app.use(express.static(path.join(__dirname, 'build'))); // dev
+console.log("current folder is : " + __dirname);
+app.use("/static", express.static(path.join(__dirname, 'static')));
+app.use("/css", express.static(path.join(__dirname, 'css')));
+app.use("/js", express.static(path.join(__dirname, 'client')));
 // app.use(express.static(__dirname)); // real
 
 app.set('views', path.join(__dirname, 'views'));
@@ -26,10 +26,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
  
 app.use(bodyParser.json());
 
-app.get('/util', function(req, res) {
+app.get('/', function(req, res) {
 	res.render('index');
 });
 
+/*
 app.get('/util/dice', async function(req, res) {
 	let logList = await dao.callDAO("findRecent10DiceLog");
 	res.render('dice', {logList: logList});
@@ -49,7 +50,7 @@ app.post('/util/api/diceLog', async function(req,res){
     let returned = await dao.callDAO("addDiceLog", date, result);
 	util.ajaxResponse(res, returned);
 });
-
+*/
 app.use(function(req, res, next){
 	res.status(404);
 	res.render('404');
