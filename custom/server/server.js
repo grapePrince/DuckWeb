@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.get('/api/shape/list', API.callHandler);
+app.get('/api/shape/list', API.handler);
 
 /*
 app.get('/util/dice', async function(req, res) {

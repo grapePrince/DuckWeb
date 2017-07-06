@@ -1,21 +1,29 @@
 
 var url = require("url");
 
-exports.callHandler = async function(req, res) {
-  let pathname = getPathName(req);  
-  console.log(pathname);
-  // let returned = await dao.callDAO("findRecent10DiceLog");
-  // util.ajaxResponse(res, returned);
-};
-
-function getPathName(req) {
-		let pathname = url.parse(req.url).pathname;
-		pathname = pathname ? pathname.replace(/^\/|\/$/g, "") : "";
-		return pathname;
-};
-
-function ajaxResponse(_res, _result) {
-        _res.writeHead(200, {"Content-Type": "application/json"});
-        var json = JSON.stringify(_result);
-        _res.end(json);
+exports.handler = function(req, res) {
+    let pathName = _getPathName(req);  console.log(pathName);
+    switch(pathName) {
+      case "api/shape/list" :
+          _getShapeList(req, res);
+      break;
     }
+};
+
+function _getPathName(req) {
+    let pathName = url.parse(req.url).pathname;
+    pathName = pathName ? pathName.replace(/^\/|\/$/g, "") : "";
+    return pathName;
+};
+
+function _response(_res, _result) {
+    _res.writeHead(200, {"Content-Type": "application/json"});
+    let json = JSON.stringify(_result);
+    _res.end(json);
+}
+
+/* API Handlers */
+function _getShapeList(req, res) {
+    let returned = "aaa" // await dao.callDAO("findRecent10DiceLog");
+    _response(res, returned);
+};
