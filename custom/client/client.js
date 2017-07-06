@@ -1,17 +1,16 @@
 
 requirejs.config({
-    baseUrl: '/static/lib',
+    baseUrl: '/js/',
     paths: { //alias paths
-    	"jquery": "./jquery",
-    	"bluebird": "./bluebird",
-        "handlebars": "./handlebars",
-        "underscore": "./underscore",
-        "crossroads": "./crossroads",
-        "app": '../app' 
+    	"jquery": "./lib/jquery",
+    	"bluebird": "./lib/bluebird",
+        "handlebars": "./lib/handlebars",
+        "underscore": "./lib/underscore",
+        "crossroads": "./lib/crossroads"
     }
 });
 
-require(['jquery', 'app/main'], 
+require(['jquery', 'main'], 
 	function($) { // Configuration loaded now, safe to do other require calls
        ;
 	}

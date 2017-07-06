@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var url = require("url");
 var fs = require("fs");
-
+var API = require("./API.js");
 // var Util = require("./Util.js");
 
 // server configuration
@@ -16,7 +16,7 @@ console.log("current folder is : " + __dirname);
 app.use("/static", express.static(path.join(__dirname, 'static')));
 app.use("/css", express.static(path.join(__dirname, 'css')));
 app.use("/js", express.static(path.join(__dirname, 'client')));
-// app.use(express.static(__dirname)); // real
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
@@ -29,6 +29,8 @@ app.use(bodyParser.json());
 app.get('/', function(req, res) {
 	res.render('index');
 });
+
+app.get('/api/shape/list', API.callHandler);
 
 /*
 app.get('/util/dice', async function(req, res) {
