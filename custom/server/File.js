@@ -9,27 +9,31 @@ class File {
             (folder, i) => {
                 let shape = {};
                 let folderpath = path.join(srcpath, folder);
+                let colorpath = path.join(folderpath, "colors");
                 shape.index = i;
                 shape.name = folder;
                 shape.thumnails = _getThumnails(folderpath);
-                shape.colors = _getColors(folderpath);
+                shape.colors = _getFileByLine(colorpath);
                 shapes.push(shape);
             }
         );
         return shapes;
     }
     
-    function _getChildFolderList(srcpath) {
-      return fs.readdirSync(srcpath).filter(
-        file => fs.lstatSync(path.join(srcpath, file)).isDirectory()
+    function _getChildFolderList(folderpath) {
+      return fs.readdirSync(folderpath).filter(
+        file => fs.lstatSync(path.join(folderpath, file)).isDirectory()
       );
     }
     
     function _getThumnails(folderpath) {
       return fs.readdirSync(folderpath).filter(
-        file => {
-        console.log(file);
-      })
+        file => file.includes(".svg")
+      );
+    };
+
+    function _getFileByLIne(filepath) {
+        return fs.readFileSync(filepath).toString().split("\n");
     };
 }
 exports File = new File();
