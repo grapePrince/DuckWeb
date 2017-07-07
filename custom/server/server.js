@@ -1,10 +1,10 @@
-var express = require("express");
-var handlebars = require("express-handlebars");
-var bodyParser = require("body-parser");
-var path = require("path");
-var url = require("url");
-var fs = require("fs");
-var API = require("./API.js");
+let express = require("express");
+let handlebars = require("express-handlebars");
+let bodyParser = require("body-parser");
+let path = require("path");
+let url = require("url");
+let fs = require("fs");
+let API = require("./API.js");
 // var Util = require("./Util.js");
 
 // server configuration

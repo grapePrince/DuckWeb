@@ -24,8 +24,7 @@ function _response(_res, _result) {
 }
 
 /* API Handlers */
-function async _getShapeList(req, res) {
-    let folderList = await File.storeShapeList("../static/shapes");
-    let shapes = Store.getShapeList();
+function _getShapeList(req, res) {
+    let shapes = File.getShapeList();
     _response(res, shapes);
 };

@@ -1,29 +1,35 @@
-
-var url = require("url");
-
-exports.handler = function(req, res) {
-    let pathName = _getPathName(req);  console.log(pathName);
-    switch(pathName) {
-      case "api/shape/list" :
-          _getShapeList(req, res);
-      break;
+let path = require("path");
+let fs = require("fs");
+class File {
+    function getShapeList() {
+        let shapes = [];
+        const shapepath = path.join(__dirname, 'static/shapes');
+        let shapeFolders = _getChildFolderList(shapepath);
+        shapeFolders.forEach( 
+            (folder, i) => {
+                let shape = {};
+                let folderpath = path.join(srcpath, folder);
+                shape.index = i;
+                shape.name = folder;
+                shape.thumnails = _getThumnails(folderpath);
+                shape.colors = _getColors(folderpath);
+                shapes.push(shape);
+            }
+        );
+        return shapes;
     }
-};
-
-function _getPathName(req) {
-    let pathName = url.parse(req.url).pathname;
-    pathName = pathName ? pathName.replace(/^\/|\/$/g, "") : "";
-    return pathName;
-};
-
-function _response(_res, _result) {
-    _res.writeHead(200, {"Content-Type": "application/json"});
-    let json = JSON.stringify(_result);
-    _res.end(json);
+    
+    function _getChildFolderList(srcpath) {
+      return fs.readdirSync(srcpath).filter(
+        file => fs.lstatSync(path.join(srcpath, file)).isDirectory()
+      );
+    }
+    
+    function _getThumnails(folderpath) {
+      return fs.readdirSync(folderpath).filter(
+        file => {
+        console.log(file);
+      })
+    };
 }
-
-/* API Handlers */
-function _getShapeList(req, res) {
-    let returned = "aaa" // await dao.callDAO("findRecent10DiceLog");
-    _response(res, returned);
-};
+exports File = new File();
