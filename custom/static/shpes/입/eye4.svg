@@ -1,0 +1,12 @@
+<?xml-stylesheet type="text/css" href="svg.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518.89 565.85">
+	<!-- 눈 1 -->
+	<g id="eye_1" data-name="eye_1"> <!--요거의 이름은 일러스트레이터에서 추출하는 레이어 이름-->
+		<path class="eye_line" d="M128.2,347,143,355.24s5.06-28.12,36.55-28.12,34.87,28.12,34.87,28.12" transform="translate(-62.63 -162.86)"/><ellipse class="eye" cx="117.09" cy="204.62" rx="19.84" ry="26.3"/><circle class="eye_light" cx="124.34" cy="192.38" r="8.24"/>
+		<path class="eye_color" d="M188.46,378.87c-1.24,2.53-3.49,5.07-8.81,5.07-4.9,0-7.72-2.54-8.67-5.08" transform="translate(-62.63 -162.86)"/>
+		<path class="eye_line" d="M357.15,347.62l-14.81,8.24s-5.06-28.12-36.55-28.12-34.87,28.12-34.87,28.12" transform="translate(-62.63 -162.86)"/>
+		<ellipse class="eye" cx="243" cy="205.24" rx="19.84" ry="26.3"/>
+		<circle class="eye_light" cx="251.06" cy="193" r="8.24"/>
+		<path class="eye_color" d="M296.89,379.49c1.24,2.53,3.49,5.07,8.81,5.07,4.9,0,7.72-2.54,8.67-5.08" transform="translate(-62.63 -162.86)"/>
+	</g>
+</svg>

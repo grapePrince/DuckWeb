@@ -1,12 +1,11 @@
 
-let url = require("url");
-let File = require("./File");
+var url = require("url");
 
-exports.handler = async function(req, res) {
+exports.handler = function(req, res) {
     let pathName = _getPathName(req);  console.log(pathName);
     switch(pathName) {
       case "api/shape/list" :
-          await _getShapeList(req, res);
+          _getShapeList(req, res);
       break;
     }
 };
@@ -24,8 +23,7 @@ function _response(_res, _result) {
 }
 
 /* API Handlers */
-function async _getShapeList(req, res) {
-    let folderList = await File.storeShapeList("../static/shapes");
-    let shapes = Store.getShapeList();
-    _response(res, shapes);
+function _getShapeList(req, res) {
+    let returned = "aaa" // await dao.callDAO("findRecent10DiceLog");
+    _response(res, returned);
 };
