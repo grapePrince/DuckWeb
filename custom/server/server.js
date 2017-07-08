@@ -5,7 +5,7 @@ let path = require("path");
 let url = require("url");
 let fs = require("fs");
 let API = require("./API.js");
-// var Util = require("./Util.js");
+let File = require("./File.js");
 
 // server configuration
 var app = express();
@@ -64,6 +64,10 @@ app.use(function(err, req, res, next){
 	res.status(500);
 	res.render('500');
 });
+
+
+/* init server */
+File.storeShapeList();
 
 app.listen(app.get('port'), function(){
   console.log( 'Express started on http://localhost:' + 

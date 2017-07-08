@@ -1,6 +1,7 @@
 
 let url = require("url");
 let File = require("./File");
+let Store = require("./Store");
 
 exports.handler = async function(req, res) {
     let pathName = _getPathName(req);  console.log(pathName);
@@ -25,6 +26,7 @@ function _response(_res, _result) {
 
 /* API Handlers */
 function _getShapeList(req, res) {
-    let shapes = File.getShapeList();
+    let shapes = [];
+    shapes = Store.getShapeList();
     _response(res, shapes);
 };
