@@ -10,9 +10,9 @@ requirejs.config({
     }
 });
 
-require(['jquery', 'main'], 
-	function($) { // Configuration loaded now, safe to do other require calls
-       ;
+require(['jquery', 'View'], 
+	function($, View) { // Configuration loaded now, safe to do other require calls
+       View.initFirstPage();
 	}
 );
 

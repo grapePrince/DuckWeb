@@ -26,9 +26,11 @@ function _getChildFolderList(folderpath) {
   );
 }
 function _getThumnails(folderpath) {
-  return fs.readdirSync(folderpath).filter(
-    file => file.includes(".svg")
-  );
+    return fs.readdirSync(folderpath).filter(
+        file => file.includes(".svg")
+    ).map(
+        file => path.join(folderpath.split("custom")[1], file)
+    )
 };
 function _getFileByLine(filepath) {
     return fs.readFileSync(filepath).toString().split("\n");
